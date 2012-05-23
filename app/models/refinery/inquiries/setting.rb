@@ -48,7 +48,7 @@ module Refinery
 
         def notification_subject
           Refinery::Setting.find_or_set(:inquiry_notification_subject,
-                                        "New inquiry from your website",
+                                        "[#{request.domain}] New inquiry from %s",
                                         :scoping => "inquiries")
         end
         
