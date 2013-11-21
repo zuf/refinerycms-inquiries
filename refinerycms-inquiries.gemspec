@@ -17,4 +17,5 @@ Gem::Specification.new do |s|
   s.add_dependency  'refinerycms-core',     '~> 2.0.1'
   s.add_dependency  'refinerycms-settings', '~> 2.0.1'
   s.add_dependency  'filters_spam',         '~> 0.2'
+  s.add_dependency  'recaptcha',            '~> 0.3'
 end

@@ -68,3 +68,4 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem "recaptcha", :require => "recaptcha/rails"
