@@ -4,6 +4,7 @@ gemspec
 
 gem 'refinerycms', '~> 2.1.0'
 gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
+gem "recaptcha", '~> 0.3.5', :require => "recaptcha/rails"
 
 group :test do
   gem 'refinerycms-testing', '~> 2.1.0'

@@ -15,7 +15,7 @@ module Refinery
       def create
         @inquiry = ::Refinery::Inquiries::Inquiry.new(params[:inquiry])
 
-        if @inquiry.save
+        if verify_recaptcha(:model => @inquiry) && @inquiry.save
           if @inquiry.ham? || Refinery::Inquiries.send_notifications_for_inquiries_marked_as_spam
             begin
               ::Refinery::Inquiries::InquiryMailer.notification(@inquiry, request).deliver
