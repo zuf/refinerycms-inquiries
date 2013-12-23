@@ -17,7 +17,9 @@ module Refinery
 
       default_scope :order => 'created_at DESC'
 
-      attr_accessible :name, :phone, :message, :email
+      attr_accessible :name, :phone, :message, :email, :captcha, :captcha_key
+
+      apply_simple_captcha
 
       def self.latest(number = 7, include_spam = false)
         include_spam ? limit(number) : ham.limit(number)

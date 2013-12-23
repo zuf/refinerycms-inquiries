@@ -1,6 +1,7 @@
 module Refinery
   module Inquiries
     class InquiriesController < ::ApplicationController
+      include SimpleCaptcha::ControllerHelpers
 
       before_filter :find_page, :only => [:create, :new]
 
@@ -15,7 +16,7 @@ module Refinery
       def create
         @inquiry = ::Refinery::Inquiries::Inquiry.new(params[:inquiry])
 
-        if @inquiry.save
+        if @inquiry.save_with_captcha #simple_captcha_valid? && @inquiry.save
           if @inquiry.ham? || Refinery::Inquiries.send_notifications_for_inquiries_marked_as_spam
             begin
               ::Refinery::Inquiries::InquiryMailer.notification(@inquiry, request).deliver
@@ -32,6 +33,7 @@ module Refinery
 
           redirect_to refinery.thank_you_inquiries_inquiries_path
         else
+          @inquiry
           render :action => 'new'
         end
       end
