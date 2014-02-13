@@ -9,7 +9,7 @@ ru:
         from_name: "%{name} [%{site_name}]"
       inquiries:
         new:
-          send: Отправить сообщение
+          send: Отправить
           privacy_policy: Мы относимся с уважением к вашим личным данным
       admin:
         inquiries:
