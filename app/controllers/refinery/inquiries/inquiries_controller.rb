@@ -10,7 +10,7 @@ module Refinery
       end
 
       def new
-        @inquiry = ::Refinery::Inquiries::Inquiry.new
+        @inquiry = ::Refinery::Inquiries::Inquiry.new(params[:inquiry])
       end
 
       def create
