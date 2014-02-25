@@ -7,11 +7,13 @@ module Refinery
     config_accessor :show_placeholders
     config_accessor :send_notifications_for_inquiries_marked_as_spam
     config_accessor :from_name
+    config_accessor :use_captcha
 
     self.show_contact_privacy_link = true
     self.show_phone_number_field = true
     self.show_placeholders = true
     self.send_notifications_for_inquiries_marked_as_spam = false
     self.from_name = "no-reply"
+    self.use_captcha = true
   end
 end
