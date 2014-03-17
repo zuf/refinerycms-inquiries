@@ -18,7 +18,7 @@ module Refinery
 
       default_scope :order => 'created_at DESC'
 
-      attr_accessible :name, :phone, :message, :email, :captcha, :captcha_key
+      attr_accessible :name, :phone, :message, :email, :callback_time, :captcha, :captcha_key
 
       apply_simple_captcha if Refinery::Inquiries.use_captcha
 

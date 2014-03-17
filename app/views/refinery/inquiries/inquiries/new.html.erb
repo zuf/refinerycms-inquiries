@@ -25,6 +25,12 @@
           <%= f.text_field :phone, :class => 'text phone',
             :placeholder => t('phone', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>
         </div>
+
+            <div class="field">
+              <%= f.label :callback_time, :class => 'placeholder-fallback' %>
+              <%= f.text_field :callback_time, :class => 'text time',
+                               :placeholder => t('callback_time', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>
+            </div>
       <% end %>
 
       <div class='field message_field'>

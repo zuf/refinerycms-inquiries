@@ -5,6 +5,7 @@ class CreateInquiries < ActiveRecord::Migration
         t.string   :name
         t.string   :email
         t.string   :phone
+        t.string   :callback_time
         t.text     :message
         t.boolean  :spam,     :default => false
         t.timestamps

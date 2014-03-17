@@ -39,6 +39,7 @@ ru:
             from: От
             click_to_email: Нажмите, чтобы отправить письмо
             phone: Телефон
+            callback_time: Удобное время звонка
             date: Дата
             message: Сообщение
         settings:
@@ -65,6 +66,7 @@ ru:
           from: От
           email: Эл. почта
           phone: Телефон
+          callback_time: Удобное время звонка
           message: Сообщение
           closing_line: С наилучшими пожеланиями
           ps: Все запросы вы можете увидеть в соответствующем разделе Refinery.
@@ -76,4 +78,5 @@ ru:
         name: Имя
         email: Эл. почта
         phone: Телефон
+        callback_time: Удобное время звонка
         message: Сообщение
